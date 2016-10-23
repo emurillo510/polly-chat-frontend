@@ -51,65 +51,104 @@ export default Ember.Component.extend({
                     if(!this.isFinished){
                         let repsonse = response;
                         console.log("RESPONSE", response);
-
-                        $('#amountWorth').append("This is your estimated salary is: $" + response.guess + '<br/>'); 
+                        $('#amountWorth').append('<h2>Amount Worth!</h2>');
+                        $('#amountWorth').append(response.guess); 
                     }
+                    
                 });
 
+                this.set('isFinished', true);
 
 
 
 
             } else if(this.get('isDetermineBeginSkill')){
                 let userInput = $('#input-chatbot').val();
-                this.toggleProperty('isDetermineIntermSkill');
+                var _this = this;
+                Ember.run.later((function() {
+                    _this.toggleProperty('isDetermineIntermSkill');
+                }), 3000);
                 $('#identify-determine-begin').append(userInput);
             } else if (this.get('isAdditionalSkills')){
                 let userInput = $('#input-chatbot').val();
-                this.toggleProperty('isDetermineBeginSkill');
+                var _this = this;
+                Ember.run.later((function() {
+                    _this.toggleProperty('isDetermineBeginSkill');
+                }), 3000);
                 $('#identify-additional-skills').append(userInput);
             } else if(this.get('isOtherChecked')){
                 let userInput = $('#input-chatbot').val();
-                this.toggleProperty('isDetermineBeginSkill');
+                var _this = this;
+                Ember.run.later((function() {
+                    _this.toggleProperty('isDetermineBeginSkill');
+                }), 3000);
                 $('#identify-other-skills').append(userInput);
             } else if(this.get('isIdentifySkillset')){
                 let userInput = $('#input-chatbot').val();
                 let checked = this.get('isOtherChecked');
                 if(checked){
-                  this.toggleProperty('isOtherSkills');
+                    var _this = this;
+                    Ember.run.later((function() {
+                        _this.toggleProperty('isOtherSkills');
+                    }), 3000);  
                 } else {
-                  this.toggleProperty('isAdditionalSkills');
+                    var _this = this;
+                    Ember.run.later((function() {
+                        _this.toggleProperty('isAdditionalSkills');
+                    }), 3000);   
                 }
             } else if(this.get('isIdentifyLocation')){
                 let userInput = $('#input-chatbot').val();
-                this.toggleProperty('isIdentifySkillset');
+                var _this = this;
+                Ember.run.later((function() {
+                    _this.toggleProperty('isIdentifySkillset');
+                }), 3000);
                 $('#identify-location').append(userInput);
             } else if(this.get('isIdentifySalary')){
                 let userInput = $('#input-chatbot').val();
-                this.toggleProperty('isIdentifyLocation');
+                var _this = this;
+                Ember.run.later((function() {
+                    _this.toggleProperty('isIdentifyLocation');
+                }), 3000);
                 $('#identify-salary').append(userInput);
             } else if(this.get('isIdentifyRole')){
                 let userInput = $('#input-chatbot').val();
-                this.toggleProperty('isIdentifySalary');
+                var _this = this;
+                Ember.run.later((function() {
+                    _this.toggleProperty('isIdentifySalary');
+                }), 3000);
                 $('#identify-role').append(userInput);
             } else if(this.get('isIdentifyIndustry')){
                 let userInput = $('#input-chatbot').val();
-                this.toggleProperty('isIdentifyRole');
+                var _this = this;
+                Ember.run.later((function() {
+                    _this.toggleProperty('isIdentifyRole');
+                }), 3000);
                 $('#identify-industry').append(userInput);
                 this.set('usersIndustry', userInput);
             } else if(this.get('isIdentifyField')){
                 let userInput = $('#input-chatbot').val();
-                this.toggleProperty('isIdentifyIndustry');
+                var _this = this;
+                Ember.run.later((function() {
+                    _this.toggleProperty('isIdentifyIndustry');
+                }), 3000);
                 $('#identify-field').append(userInput);
             } else if (this.get('isIdentifyEdu')) {
                 let userInput = $('#input-chatbot').val();
-                this.toggleProperty('isIdentifyField');
+                var _this = this;
+                Ember.run.later((function() {
+                    _this.toggleProperty('isIdentifyField');
+                }), 3000);
                 $('#identify-edu').append(userInput);
             } else if (this.get('isGreeting')) {
                 let userInput = $('#input-chatbot').val();
-                this.toggleProperty('isIdentifyEdu');
                 $('#identify-name').append(userInput);
                 this.set('userName', userInput);
+                var _this = this;
+                Ember.run.later((function() {
+                    _this.toggleProperty('isIdentifyEdu');
+                }), 3000);
+                
             }
 
 
