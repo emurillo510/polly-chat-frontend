@@ -51,13 +51,11 @@ export default Ember.Component.extend({
                     if(!this.isFinished){
                         let repsonse = response;
                         console.log("RESPONSE", response);
-                        $('#amountWorth').append('<h2>Amount Worth!</h2>');
-                        $('#amountWorth').append(response.guess); 
+
+                        $('#amountWorth').append("This is your estimated salary is: $" + response.guess + '<br/>'); 
                     }
-                    
                 });
 
-                this.set('isFinished', true);
 
 
 
