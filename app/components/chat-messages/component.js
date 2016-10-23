@@ -45,8 +45,6 @@ export default Ember.Component.extend({
                 console.log('herokuURL', herokuURL);
 
                 Ember.$.post(herokuURL, data, function(response){
-
-                    
                     if(!this.isFinished){
                         let repsonse = response;
                         console.log("RESPONSE", response);
@@ -54,7 +52,6 @@ export default Ember.Component.extend({
                         $('#amountWorth').append("$" + response.guess + ".\n");
                         $('#amountWorth').append(response.hsf);
                     }
-                    
                 });
 
                 this.set('isFinished', true);
