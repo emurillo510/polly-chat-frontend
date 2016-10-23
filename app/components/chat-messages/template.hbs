@@ -26,7 +26,7 @@
   <div id="identify-industry"></div>
 
   {{#if isIdentifyRole}}
-      <p>What is your current role in {{usersIndustry}}</p>
+      <p>What is your current role in {{usersIndustry}}?</p>
   {{/if}}
 
   <div id="identify-role"></div>
@@ -38,13 +38,13 @@
   <div id="identify-salary"></div>
 
   {{#if isIdentifyLocation}}
-      <p>Where are you currently located as a Software Developer?</p>
+      <p>Where are you currently located as a {{usersIndustry}}?</p>
   {{/if}}
 
   <div id="identify-location"></div>
 
   {{#if isIdentifySkillset}}
-      <p>Here are some common skills that sofeware developers have. Select the ones that you have experience in!</p>
+      <p>Here are some common skills that {{usersIndustry}} have. Select the ones that you have experience in!</p>
       {{input type="checkbox" name="isAdmin" checked=isAdmin}}C#
       {{input type="checkbox" name="isAdmin" checked=isAdmin}}Java
       {{input type="checkbox" name="isAdmin" checked=isAdmin}}JavaScript
