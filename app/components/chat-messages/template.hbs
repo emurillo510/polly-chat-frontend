@@ -1,0 +1,99 @@
+<div id="polly-messages">
+{{#if isGreeting}}
+    <p>"Hi I'm Polly! I'm here to help you research your fair salary. First, I need to learn a little about you. What's your name?"</p>
+{{/if}}
+
+<div id="identify-name"></div>
+
+{{#if isIdentifyEdu}}
+
+<p>Nice to meet you, Jane. Let's get started. What's your highest earned degree or level of school?</p>
+
+{{/if}}
+<div id="identify-edu"></div>
+
+{{#if isIdentifyField}}
+    <p>"Great! What was the field of study?"</p>
+{{/if}}
+
+<div id="identify-field"></div>
+
+{{#if isIdentifyIndustry}}
+    <p>What industry are you currently in?</p>
+{{/if}}
+
+<div id="identify-industry"></div>
+
+{{#if isIdentifyRole}}
+    <p>What is your current role in Healthcare</p>
+{{/if}}
+
+<div id="identify-role"></div>
+
+{{#if isIdentifySalary}}
+    <p>"What is your current annual salary?"</p>
+{{/if}}
+
+<div id="identify-salary"></div>
+
+{{#if isIdentifyLocation}}
+    <p>Where are you currently located as a Software Developer?</p>
+{{/if}}
+
+<div id="identify-location"></div>
+
+{{#if isIdentifySkillset}}
+    <p>Here are some common skills that sofeware developers have. Select the ones that you have experience in!</p>
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}C#
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}Java
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}JavaScript
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}C++
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}Python
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}.NET
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}SQL
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}ASP.net
+    {{input type="checkbox" name="isOther" checked=isOtherChecked}}other
+{{/if}}
+
+<div id="identify-skillset"></div>
+
+{{#if isOtherSkills}}
+    <p>What other skillsets do you want to include?"</p>
+{{/if}}
+
+<div id="identify-other-skills"></div>
+
+{{#if isAdditionalSkills}}
+    <p>"Were there any other skills that I missed? Feel free to list out any addtional skills you'd like to add for consideration."</p>
+{{/if}}
+
+<div id="identify-additional-skills"></div>
+
+{{#if isDetermineBeginSkill}}
+    <p>Based on your selections, we've gathered some of your skillsets below. Select the skillsets you would say you have only 0-2 years of experience with: "</p>
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}Java
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}JavaScript
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}C++
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}Python
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}HTML
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}CSS
+{{/if}}
+
+<div id="identify-determine-begin"></div>
+
+{{#if isDetermineIntermSkill}}
+    <p>Great! What skillsets would you say you have at least 3-5 years of experience with?"</p>
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}Java
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}JavaScript
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}C++
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}Python
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}HTML
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}CSS
+ {{/if}}
+</div>
+
+
+<textarea id="input-chatbot" class="form-control" rows="3"></textarea>
+<button type="button" class="btn btn-success" {{action 'submit'}}>Submit</button>
+
+
