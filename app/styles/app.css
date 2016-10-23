@@ -4,7 +4,7 @@ General
 
 
 
-#homepage, #chatbox{
+#homepage, #chatbot{
 	text-align: center;
 	margin: 0 auto;
 	font-family:'Montserrat', sans-serif !important;
@@ -19,53 +19,55 @@ h2{
 	font-size: 36px;
 }
 
-/* {
-    width: 280px;
+#dialog{
+   	width: 80%;
     height: 100px;
-    text-align: right;
-    margin-top: 5px;
-    display: inline;
-}*/
-#chatbox{
-	margin: 0;
+    margin: 0 10%;
+   	text-align:left;
 }
+
+#input-bot{
+	display: inline;
+	float: left;
+	width: 92%;
+	margin: 0;
+	height: 40px;
+}
+
+
 
 #polly-messages{
-	width: 100%;
-	text-align: right;
+	overflow-y: scroll;
+	height: 350px;
+	border-radius: 10px;
 }
-
 
 
 #input-chatbot{
 	text-align: right;
-	display: inline;
-	max-width: 25%;
-	margin: 0, 0, 0, 25%;
-	height: 40px;
-	margin: 0;
 }
 
-button, .btn-success{
+
+button/*, .btn-success*/{
 	text-align: center;
 	display: inline;
 	width: 224px;
 	height: 52px;
 	margin-left: 0;
 }
-/*
+
 button{
 	border-radius: 100px;
-	width: 224px;
-	height: 52px;
 }
-*/
+
 
 .btn-success{
 	border-radius: 10px;
-	max-width: 25%;
+	/*max-width: 25%;
 	margin: 0, 25%, 0, 0;
 	padding: 0;
+	*/
+	width: 75px;
 	height: 	40px
 	margin: 0;
 }
@@ -121,3 +123,4 @@ button:hover, a:hover{
  color: #fff;
  border-color: #05A196;
 }
+
