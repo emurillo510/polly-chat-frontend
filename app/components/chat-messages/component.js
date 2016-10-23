@@ -5,6 +5,9 @@ let herokuURL = 'https://polly-bot-server.herokuapp.com/app';
 
 export default Ember.Component.extend({
     amountWorth: 0,
+    userName: "",
+    usersIndustry: "",
+    isFinished: false,
     isOtherChecked: false,
 
     isGreeting: true,
@@ -31,10 +34,6 @@ export default Ember.Component.extend({
                 let userIndustry = $('#identify-industry').html();
                 let userRole = $('#identify-role').html();     
 
-                alert(userEducation);
-                alert(userField);
-                alert(userIndustry);
-                alert(userRole);
 
                 let data = {
                     "degree": userEducation,
@@ -44,16 +43,21 @@ export default Ember.Component.extend({
                 }
 
                 console.log('data is: ', data);
-                alert('data is: ', data);
                 console.log('herokuURL', herokuURL);
 
                 Ember.$.post(herokuURL, data, function(response){
-                    let repsonse = response;
-                    console.log("RESPONSE", response);
-                    alert(response);
-                    $('#polly-message').append('<h2>Amount Worth!</h2>');
-                    $('#polly-message').append(response.guess); 
+
+                    
+                    if(!this.isFinished){
+                        let repsonse = response;
+                        console.log("RESPONSE", response);
+                        $('#amountWorth').append('<h2>Amount Worth!</h2>');
+                        $('#amountWorth').append(response.guess); 
+                    }
+                    
                 });
+
+                this.set('isFinished', true);
 
 
 
@@ -94,6 +98,7 @@ export default Ember.Component.extend({
                 let userInput = $('#input-chatbot').val();
                 this.toggleProperty('isIdentifyRole');
                 $('#identify-industry').append(userInput);
+                this.set('usersIndustry', userInput);
             } else if(this.get('isIdentifyField')){
                 let userInput = $('#input-chatbot').val();
                 this.toggleProperty('isIdentifyIndustry');
@@ -106,6 +111,7 @@ export default Ember.Component.extend({
                 let userInput = $('#input-chatbot').val();
                 this.toggleProperty('isIdentifyEdu');
                 $('#identify-name').append(userInput);
+                this.set('userName', userInput);
             }
 
 
