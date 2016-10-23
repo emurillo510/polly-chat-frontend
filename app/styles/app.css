@@ -1,5 +1,123 @@
-#input-chatbot {
-    width: 200px;
+/*********************
+General
+*********************/
+
+
+
+#homepage, #chatbox{
+	text-align: center;
+	margin: 0 auto;
+	font-family:'Montserrat', sans-serif !important;
+	font-size: 18px;
+}
+
+h1{
+	font-size: 72px;
+}
+
+h2{
+	font-size: 36px;
+}
+
+/* {
+    width: 280px;
     height: 100px;
-    
+    text-align: right;
+    margin-top: 5px;
+    display: inline;
+}*/
+#chatbox{
+	margin: 0;
+}
+
+#polly-messages{
+	width: 100%;
+	text-align: right;
+}
+
+
+
+#input-chatbot{
+	text-align: right;
+	display: inline;
+	max-width: 25%;
+	margin: 0, 0, 0, 25%;
+	height: 40px;
+	margin: 0;
+}
+
+button, .btn-success{
+	text-align: center;
+	display: inline;
+	width: 224px;
+	height: 52px;
+	margin-left: 0;
+}
+/*
+button{
+	border-radius: 100px;
+	width: 224px;
+	height: 52px;
+}
+*/
+
+.btn-success{
+	border-radius: 10px;
+	max-width: 25%;
+	margin: 0, 25%, 0, 0;
+	padding: 0;
+	height: 	40px
+	margin: 0;
+}
+
+
+
+
+/*********************
+Colors
+*********************/
+
+#homepage{
+	background: #fff;
+	color: #555;
+}
+
+#polly-messages{
+    background: #EFEFEF;
+}
+
+#input-chatbot {
+    background: #fff;
+}
+
+h1{
+	color: #06c1b3;
+}
+
+button, .btn-success{
+	color: #fff;
+	background: #06c1b3;
+	border-color: #06c1b3;
+}
+
+a{
+	color: #fff;
+}
+
+
+.navbar-default .navbar-brand{
+	color: #fff;
+}
+
+button:hover, a:hover{
+ text-decoration: none;
+ background: #fff;
+ color: #06C1B3;
+}
+
+.btn-success:hover, .btn-success:active, .btn-success:focus {
+ text-decoration: none;
+ background: #05A196;
+ color: #fff;
+ border-color: #05A196;
 }
